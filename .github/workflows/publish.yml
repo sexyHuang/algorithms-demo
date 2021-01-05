@@ -2,12 +2,12 @@
 
 name: 打包应用并上传服务器
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
- 
+    branches: [master]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -28,26 +28,28 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.15.4
-      
+
       # 安装依赖
       - name: 安装依赖
         run: npm install
-        
+
+      # 打包
+      - name: 打包
+        run: npm run build
+
       # 上传到服务器
       - name: 发布
         uses: easingthemes/ssh-deploy@v2.1.1
-        env: 
+        env:
           # 私钥
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           # scp参数
-          ARGS: "-avzr --delete"
+          ARGS: '-avzr --delete'
           # 源目录
-          SOURCE: "dist"
+          SOURCE: 'dist'
           # 服务器ip：换成你的服务器IP
-          REMOTE_HOST: "115.159.71.25"
+          REMOTE_HOST: '115.159.71.25'
           # 用户
-          REMOTE_USER: "root"
+          REMOTE_USER: 'root'
           # 目标地址
-          TARGET: "/root/www/algorithms-demo"
-
-          
+          TARGET: '/root/www/algorithms-demo'
