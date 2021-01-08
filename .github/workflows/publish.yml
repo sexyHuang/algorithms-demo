@@ -37,6 +37,29 @@ jobs:
       - name: 打包
         run: npm run build
 
+      # 上传到cdn
+      - name: 上传到cdn
+        uses: sexyHuang/qiniu-upload@master
+        with:
+          # Your qiniu access key, required.
+          access_key: ${{ secrets.QINIU_ACCESS_KEY }}
+
+          # Your qiniu secret key, required.
+          secret_key: ${{ secrets.QINIU_SECRET_KEY }}
+
+          # Bucket name, required.
+          bucket: ${{ secrets.QINIU_BUCKET }}
+
+          # The local directory (or file) you want to upload to bucket.
+          # Default: './'
+          source_dir: 'algorithms-demo'
+
+          # The directory inside of the bucket you want to upload to, namely key prefix prepended to dest file key.
+          # Default: '/'
+          dest_dir: '/algorithms-demo'
+
+          exclude: '["index.html"]'
+
       # 上传到服务器
       - name: 发布
         uses: easingthemes/ssh-deploy@v2.1.1
