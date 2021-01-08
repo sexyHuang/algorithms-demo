@@ -1,5 +1,5 @@
 const path = require('path');
-const cdnBaseUrl = './';
+const cdnBaseUrl = 'https://cdn.mooyuer.com/algorithms-demo/';
 
 module.exports = {
   base: cdnBaseUrl,
