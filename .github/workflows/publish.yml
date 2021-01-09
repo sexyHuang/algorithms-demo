@@ -83,7 +83,7 @@ jobs:
           # 源目录
           SOURCE: 'algorithms-demo'
           # 服务器ip：换成你的服务器IP
-          REMOTE_HOST: ${{ secret.SERVER_IP }}
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
           # 用户
           REMOTE_USER: 'root'
           # 目标地址
