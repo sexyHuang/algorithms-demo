@@ -1,0 +1,15 @@
+name: test action
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: get package info
+        id: package
+        uses: codex-team/action-nodejs-package-info@v1
+
+      - name: Get the output
+        run: |
+          echo "name: ${{ steps.package.outputs.name }}"
+          echo "version: ${{ steps.package.outputs.version }}"
+          echo "npmjs-link: ${{ steps.package.outputs.npmjs-link }}"
