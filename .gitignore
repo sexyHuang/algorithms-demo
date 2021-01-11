@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
 dist
-algorithms-demo
 dist-ssr
 *.local
