@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.1](https://github.com/sexyHuang/algorithms-demo/compare/v1.0.0...v0.0.1) (2021-01-11)
 
+### [0.0.1](https://github.com/sexyHuang/algorithms-demo/compare/v1.0.0...v0.0.1) (2021-01-11)
+
 ## 1.0.0 (2021-01-11)
 
 
