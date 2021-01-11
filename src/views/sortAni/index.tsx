@@ -174,11 +174,11 @@ const SortAni = defineComponent({
           }}
         />
         <div>
-          <button onClick={nextStep}>next</button>
-          <button onClick={revertStep}>before</button>
+          <button onClick={nextStep}>下一步</button>
+          <button onClick={revertStep}>上一步</button>
         </div>
-        <div onClick={start}>start sort</div>
-        <div onClick={stop}>pause sort</div>
+        <div onClick={start}>开始排序</div>
+        <div onClick={stop}>停止</div>
       </div>
     );
   }
