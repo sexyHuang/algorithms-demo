@@ -1,13 +1,14 @@
 {
   "name": "algorithms-demo",
-  "version": "0.0.0",
+  "version": "1.0.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "release": "standard-version",
     "release-f": "standard-version -f",
-    "release-major": "standard-version -r major",
-    "release-minor": "standard-version -r minor",
-    "release-patch": "standard-version -r patch"
+    "release-major": "standard-version  --release-as major",
+    "release-minor": "standard-version  --release-as minor",
+    "release-patch": "standard-version  --release-as patch"
   },
   "dependencies": {
     "konva": "^7.2.2",
